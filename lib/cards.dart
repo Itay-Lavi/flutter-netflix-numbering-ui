@@ -35,14 +35,14 @@ class _CardsState extends State<Cards> {
       cards = cards.reversed.toList();
     }
 
-//generate array, should get array from state management / API
+    //generate array, should get array from state management / API
     stackedList();
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 8, 8, 8),
       body: ListView.builder(
         controller: controller,
-        //Reverse is set to make right card is stacked over the left card
+        //Reverse is set to make left card stacked over the right card
         reverse: true,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
